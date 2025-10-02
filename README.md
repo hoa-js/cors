@@ -15,7 +15,11 @@ import { Hoa } from 'hoa'
 import { cors } from '@hoajs/cors'
 
 const app = new Hoa()
-app.extend(cors())
+app.use(cors())
+
+app.use(async (ctx) => {
+  ctx.res.body = 'Hello, Hoa!'
+})
 
 export default app
 ```
