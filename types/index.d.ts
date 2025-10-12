@@ -1,4 +1,4 @@
-import type { HoaContext } from 'hoa'
+import type { HoaContext, HoaMiddleware } from 'hoa'
 
 export type CORSOrigin =
   | string
@@ -18,8 +18,6 @@ export interface CORSOptions {
   exposeHeaders?: string[]
 }
 
-export type CorsMiddleware = (ctx: HoaContext, next: () => Promise<void>) => Promise<void>
-
-export function cors(options?: CORSOptions): CorsMiddleware
+export function cors(options?: CORSOptions): HoaMiddleware
 
 export default cors
