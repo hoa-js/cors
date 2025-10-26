@@ -11,8 +11,6 @@
 /**
  * CORS middleware for Hoa.
  *
- * Based on Hono's CORS middleware approach, adapted to Hoa's Context/Request/Response APIs.
- *
  * Options:
  * - origin: string | string[] | function to determine the allowed Origin
  * - allowMethods: string[] | function for allowed methods (used for preflight)
